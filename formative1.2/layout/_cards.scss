@@ -1,0 +1,130 @@
+//card styling
+.cards{
+    position: relative;
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+
+        text-transform: uppercase;
+        
+        .card1{
+            flex: 1 0 90%;
+            // height: 50vh;
+            @include cardType1('assets/erna-with-handles-grid.jpg');
+
+            .container2{
+                height: 50vh;
+                margin: 3em;
+                padding: 1em;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        .card2{
+            flex: 1 0 90%;
+            // height: 50vh;
+            @include cardType2;
+
+            .container2{
+                border: medium solid $primary-color;
+                height: 50vh;
+                margin: 3em;
+                padding: 1em;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        .card3{
+            flex: 1 0 90%;
+            // height: 50vh;
+            @include cardType2;
+
+            .container2{
+                z-index: 100;
+                
+                border: medium solid $primary-color;
+                background-color: $secondary-color;
+                height: 50vh;
+                margin: 3em;
+                padding: 1em;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        .card4{
+            flex: 1 0 90%;
+            // height: 50vh;
+            @include cardType1('assets/andy-back-grid.jpg');
+
+            .container2{
+                height: 50vh;
+                margin: 3em;
+                padding: 1em;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        .sub-divider{
+            @include subDivider(5em, 0.1em);
+        }
+    }
+
+    &:after{
+        @include divider;
+    }
+}
+
+
+
+/*for small tablet - inclusive*/
+@media only screen and (min-width : $bpSmallTab) {
+    .cards{
+        .container{
+            .card1, .card2, .card3, .card4{
+                flex: 1 0 40%;
+                // height: 100vh;
+                .container2{
+                    height: 75vh;
+                    margin: 5em;
+                }
+            }
+        }
+    }
+}
+
+/*for tablet - inclusive*/
+@media only screen and (min-width : $bpTab) {
+
+    // .cards{
+    //     .container{
+    //         .card1, .card2, .card3, .card4{
+    //             flex: 1 0 20%;
+    //         }
+    //     }
+    // }
+}
+
+/*for desktop - inclusive*/
+@media only screen and (min-width : $bpDesktop) {
+}

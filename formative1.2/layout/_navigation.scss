@@ -1,0 +1,141 @@
+// nav section
+
+/*All devices and mobile phone*/
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    // margin: 0 auto;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 200;
+    transition: top 0.3s;
+}
+
+.logo{
+    flex: 0 0 auto;
+
+    img{
+        height: 3em;
+        width: 10em;
+    }
+}
+
+.bars{
+    flex: 0 0 auto;
+}
+
+.bar1, .bar2, .bar3{
+    width: 35px;
+    height: 5px;
+    background-color: $primary-color;
+    margin: 6px 1em;
+    transition: 0.4s;
+}
+
+.change .bar1{
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2{
+    opacity: 0;
+}
+
+.change .bar3{
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.joinButton{
+    @include standardButton(10em, 3em);
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 70vw;
+    background-color: rgba(0,0,0,0.9);
+    padding-top: 5em;
+    align-items: center;
+    transition: all ease 1s;
+
+    li{
+        >a{
+            display: block;
+            width: 70vw;
+            text-align: center;
+            line-height: 2em;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            transition: color ease 1s;
+
+            &:hover{
+                color: $primary-color;
+                background-color: rgba(236,0,140,0.3);
+            }
+        }
+
+        button{
+            text-transform: uppercase;
+        }
+    }
+
+    &.open{
+        left: 0;
+    }
+}
+
+/*for small tablet - inclusive*/
+@media only screen and (min-width : $bpSmallTab) {
+    .bars{
+        display: none;
+    }
+
+    .nav-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        flex: 1 0 auto;
+        position: static;
+        width: auto;
+        height: auto;
+        left: 0;
+        background-color: transparent;
+        padding-top: 0;
+        
+        li{
+            padding-top: 1em;
+            padding-left: 1em;
+            padding-bottom: 1em;
+
+            >a{
+                width: 6em;
+
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+            &:nth-last-child(1){
+                padding-right: 1em;
+            }
+        }
+    }
+}
+
+/*for tablet - inclusive*/
+@media only screen and (min-width : $bpTab) {
+    // .nav-links{
+    //     justify-content: flex-end;
+    // }
+}
+
+/*for desktop - inclusive*/
+@media only screen and (min-width : $bpDesktop) {
+}

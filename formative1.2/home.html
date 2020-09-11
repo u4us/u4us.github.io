@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+    
+    <link rel="stylesheet" href="main.css">
+
+    <script>
+        function myfunction(x){
+            x.classList.toggle("change");
+        }
+
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementsByClassName("nav")[0].style.top = "0";
+        } else {
+            document.getElementsByClassName("nav")[0].style.top = "-100px";
+        }
+        prevScrollpos = currentScrollPos;
+        }
+    </script>
+</head>
+<body id="top-anchor">
+    <header>
+        <div class="nav">
+            <div class="logo"><a href="#top-anchor"><img src="assets/VrFitnessVapor.png" alt=""></a></div>
+            <div class="bars" onclick="myfunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#process-anchor">The system</a></li>
+                <li><a href="">The gear</a></li>
+                <li><a href="#card-anchor">The gains</a></li>
+                <li><a href="#app-anchor">The app</a></li>
+                <li><button class="joinButton">3-DAY FREE TRIAL</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="section banner parallax">
+        <div class="container">
+            <h1>THE NEXT GREAT LEAP FORWARD IN FITNESS...</h1>
+            <h2>- A FULLY IMMERSIVE VIRTUAL REALITY GYM EXPERIENCE</h2>
+            <button class="levelUpButton">I WANT TO LEVEL UP</button>
+        </div>
+    </section>
+
+    <!-- <div class="divider"></div> -->
+
+    <section id="process-anchor" class="section process">
+        <div class="container">
+            <!-- flex -->
+            <div class="step1">
+                <div class="container2">
+                    <h2>gear up</h2>
+                    <div class="sub-divider"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ipsa?</p>
+                </div>
+            </div>
+            <div class="step2">
+                <div class="container2">
+                    <h2>strap in</h2>
+                    <div class="sub-divider"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, asperiores.</p>
+                </div>
+            </div>
+            <div class="step3">
+                <div class="container2">
+                    <h2>game on</h2>
+                    <div class="sub-divider"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, exercitationem?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="section sponsors">
+        <div class="container">
+            sponsors
+        </div>
+    </section> -->
+
+    <section id="card-anchor" class="section cards">
+        <div class="container">
+            <div class="card card1 card-type1">
+                <div class="container2">
+                    <h1>
+                        your body;<br>
+                        the controller
+                    </h1>
+                    <div class="sub-divider"></div>
+                    <h1>
+                        state of the art<br>
+                        resistance simulation
+                    </h1>
+                </div>
+            </div>
+            <div class="card card2 card-type2">
+                <div class="container2">
+                    <h1>
+                        customisable environment;<br>
+                        the way you like it
+                    </h1>
+                    <div class="sub-divider"></div>
+                    <h1>
+                        connect from home
+                    </h1>
+                </div>
+            </div>
+            <div class="card card3 card-type1">
+                <div class="container2">
+                    <h1>
+                        single-person booths<br>
+                    </h1>
+                    <div class="sub-divider"></div>
+                    <h1>
+                        judgement-free
+                    </h1>
+                </div>
+            </div>
+            <div class="card card4 card-type2">
+                <div class="container2">
+                    <h1>
+                        solo
+                    </h1>
+                    <div class="sub-divider"></div>
+                    <h1>
+                        play against the competition
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <div class="divider"></div> -->
+
+    <section id="app-anchor" class="section app parallax2">
+        <div class="container">
+            <div class="card">
+                <h1>level up;<br>
+                    earn discounts</h1>
+                <h1>tracking app <br>
+                    available</h1>
+                <img src="assets/google-play-badge.png" alt="">
+            </div>
+            <div class="phone">
+                <img src="assets/iPhoneMockup22.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer class="contact">
+        <div class="container">
+            <div class="left">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d51044.443211926206!2d174.73809599999998!3d-36.907624199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snz!4v1553601833982" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="right">
+                <p>Contact</p>
+                <p>About</p>
+                <p>Opening hours</p>
+                <div class="wrap">
+                    <ul class="days">
+                        <li>Sunday</li>
+                        <li>Monday</li>
+                        <li>Tuesday</li>
+                        <li>Wednesday</li>
+                        <li>Thursday</li>
+                        <li>Friday</li>
+                        <li>Saturday</li>
+                    </ul>
+                    <ul class="hours">
+                        <li>Closed</li>
+                        <li>07:30a.m.-04:30p.m.</li>
+                        <li>07:30a.m.-04:30p.m.</li>
+                        <li>07:30a.m.-04:30p.m.</li>
+                        <li>07:30a.m.-04:30p.m.</li>
+                        <li>07:30a.m.-04:30p.m.</li>
+                        <li>Closed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+        $('.bars').on('click', function(){
+            $('.nav-links').toggleClass('open');
+        });
+    </script>
+</body>
+</html>

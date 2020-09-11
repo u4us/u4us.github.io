@@ -1,0 +1,69 @@
+
+    //standard site-wide themed button
+@mixin standardButton($button-width, $button-height){
+    border: 5px solid $primary-color;
+    background-color: transparent;
+    // width: 10em;
+    // height: 3em;
+    width: $button-width;
+    height: $button-height;
+    position: relative;
+    color: $primary-color;
+    // box-sizing: border-box;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0em;
+        height: 100%;
+        background-color: $primary-color;
+        transition: width ease 1s;
+        mix-blend-mode: difference;
+    }
+
+    &:hover::after{
+        width: 100%;
+    }
+}
+
+    //cards
+@mixin cardType1($url){
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url($url);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+}
+
+@mixin cardType2{
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+}
+
+    //dividers
+@mixin divider{
+    content: '';
+    background-image: url('assets/pulseBit.png');
+    background-size: cover;
+    background-position: center;
+    display: block;
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    height: 35em;
+    transform: translate(0, -50%);
+    pointer-events: none;
+}
+
+@mixin subDivider($width, $height){
+    width: $width;
+    height: $height;
+    background-color: $primary-color;
+}

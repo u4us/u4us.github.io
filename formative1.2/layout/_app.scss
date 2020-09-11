@@ -1,0 +1,92 @@
+//app styling
+
+.app{
+    height: 100vh;
+    // background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('assets/black-box-woodchop-electric.jpg');
+    // background-size: cover;
+    // background-position: center;
+    position: relative;
+    
+    .container{
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .card{
+            flex: 1 0 90%;
+            height: 50vh;
+            position: relative;
+            z-index: 150;
+
+            @include cardType2;
+            background-color: transparent;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+
+            img{
+                transform: scale(0.4);
+                display: block;
+                width: 100%;
+                transition: all ease-in-out 1s;
+            }
+
+        }
+
+        .phone{
+            flex: 1 0 90%;
+            height: 50vh;
+            position: relative;
+
+            img{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                display: block;
+                
+                max-height: 50vh;
+                padding: 2em;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+.parallax2{
+    height: 100%;
+
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('assets/black-box-woodchop-electric.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*for small tablet - inclusive*/
+@media only screen and (min-width : $bpSmallTab) {
+    .app{
+        .container{
+            .card{
+                flex: 1 0 40%;
+                height: 100vh
+            }
+
+            .phone{
+                flex: 1 0 40%;
+
+                img{
+                    transform: translate(-50%,0%)
+                }
+            }
+        }
+    }
+}
+
+/*for tablet - inclusive*/
+@media only screen and (min-width : $bpTab) {
+}
+
+/*for desktop - inclusive*/
+@media only screen and (min-width : $bpDesktop) {
+}

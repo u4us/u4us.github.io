@@ -1,0 +1,91 @@
+//contact styling
+.contact{
+    .container{
+        height: 100vh;
+        background-color: rgba(40, 40, 40, 1);
+        display: flex;
+        flex-wrap: wrap;
+
+        .left{
+            flex: 1 0 90%;
+            min-height: 50vh;
+
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .right{
+            flex: 1 0 90%;
+            color: white;
+            padding: 4em;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+
+            p{
+                flex: 1 0 90%;
+                text-align: center;
+                font-size: 1.5em;
+                text-transform: uppercase;
+                transition: all ease 1s;
+                display: inline;
+            }
+
+            p:hover{
+                color: $primary-color;
+            }
+            .wrap{
+                flex: 1 0 90%;
+                display: flex;
+
+                .days{
+                    flex: 1 0 40%;
+                }
+
+                .hours{
+                    flex: 1 0 40%;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+/*for small tablet - inclusive*/
+@media only screen and (min-width : $bpSmallTab) {
+
+    .contact{
+        .container{
+            height: 100vh;
+
+            .left{
+                flex: 1 0 90%;
+            }
+    
+            .right{
+                flex: 1 0 90%;
+                .wrap{
+                .days{
+                    text-align: right;
+                    padding-right: 1em;
+                }
+
+                .hours{
+                    text-align: left;
+                    padding-left: 1em;
+                }
+            }
+            }
+        }
+    }
+}
+
+/*for tablet - inclusive*/
+@media only screen and (min-width : $bpTab) {
+}
+
+/*for desktop - inclusive*/
+@media only screen and (min-width : $bpDesktop) {
+}
